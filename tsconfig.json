@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@verdocs/create-button": [
+        "dist/verdocs/create-button"
+      ],
+      "@verdocs/create-button/*": [
+        "dist/verdocs/create-button/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "@verdocs/create-button": {
+      "projectType": "library",
+      "root": "projects/verdocs/create-button",
+      "sourceRoot": "projects/verdocs/create-button/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/verdocs/create-button/tsconfig.lib.json",
+            "project": "projects/verdocs/create-button/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/verdocs/create-button/src/test.ts",
+            "tsConfig": "projects/verdocs/create-button/tsconfig.spec.json",
+            "karmaConfig": "projects/verdocs/create-button/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/verdocs/create-button/tsconfig.lib.json",
+              "projects/verdocs/create-button/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "create-document-button"
 }

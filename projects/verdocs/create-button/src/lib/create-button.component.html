@@ -1,0 +1,5 @@
+<button mat-raised-button class="template__action-button" [disabled]="!canClickCreate()"
+  [ngClass]="{'inProgress': isInProgress}" (click)="openCreateEnvelopeDialog(true)">
+  <span *ngIf="!isInProgress"> {{ templateActionLabel() }}</span>
+  <mat-spinner class="template__action-progress" [diameter]="32" *ngIf="isInProgress"></mat-spinner>
+</button>
